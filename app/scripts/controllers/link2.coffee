@@ -6,24 +6,23 @@ angular.module('oakApp')
     scene = document.getElementById('scene')
     parallax = new Parallax(scene)
 
+    $scope.sceneText =
+      scene: 5
+      line: 2
+      sequence: 1
 
-    $scope.log = (stuffz) ->
-      console.log stuffz
+    $scope.scene =
+      show1: true
+      show2: false
+      show3: false
+      show4: false
+      next: false
 
-    showStuff = ->
-      console.log 'showStuff'
-      $scope.toggle2 = false
-      $scope.toggle1 = false
-      $scope.toggle3 = false
-      $scope.doStuff()    
-
-    hideStuff = ->
-      console.log 'hideStuff'
-      $scope.toggle2 = true
-      $scope.toggle1 = true
-      $scope.toggle3 = true
-      $timeout showStuff, 2000 
-
-    $scope.doStuff = ->
-      console.log 'dostuff'
-      $timeout hideStuff, 3000
+    actions = ->
+      t = $scope.sceneText
+      $scope.scene.show1 = if t.scene == 5 and t.line == 2 then true else false
+      $scope.scene.show2 = if t.scene == 5 and t.line == 3 then true else false
+      $scope.scene.show3 = if t.scene == 5 and t.line == 4 then true else false
+      $scope.scene.show4 = if t.scene == 5 and t.line == 5 then true else false
+      $scope.scene.next = if t.scene == 6 then true else false  
+    $scope.$watch 'sceneText', actions, true

@@ -1,22 +1,22 @@
-<div style="margin-top:100px;">
-  <input type="checkbox" ng-model="toggle2"> Yeoman </input>
-  <input type="checkbox" ng-model="toggle3"> Mammoth </input>
-  <input type="checkbox" ng-model="toggle1"> ITVJ </input> 
-  <input type="checkbox" ng-model="toggle4"> GIF </input>   
+<div id="scene-x">
   <br />
   <br />
   <ul id="scene" data-scalar-x="10" data-scalar-y="10">
-    <li class="layer" data-depth="0.25" ng-class="{hide: toggle4}">
-      <img src="images/wonders2.gif" ng-click="log('wonders')">
+    <li class="layer"></li>
+    <li class="layer scene-x-layer4" data-depth="0.25" ng-show="scene.show4">
+      <img src="images/scene-X-1-4.png">
     </li>        
-    <li class="layer" data-depth="0.8" ng-class="{hide: toggle1}">
-      <img src="images/itvj.jpg" width="50%" ng-click="log('itvj')">
+    <li class="layer scene-x-layer3" data-depth="0.8" ng-show="scene.show3">
+      <img src="images/scene-X-1-3.png">
     </li> 
-    <li class="layer" data-depth="0.25" ng-class="{hide: toggle3}">
-      <img src="images/mammoth.jpg" ng-click="log('mammoth')">
+    <li class="layer scene-x-layer2" data-depth="0.25" ng-show="scene.show2">
+      <img src="images/scene-X-1-2.png">
     </li>
-    <li class="layer" data-depth=".25" ng-class="{hide: toggle2}">
-      <img src="images/yeoman.png" ng-click="log('yeoman')">
-    </li>    
+    <li class="layer scene-x-layer1" data-depth=".25" ng-show="scene.show1">
+      <img src="images/scene-X-1-1.png">
+    </li>
+    <li class="layer" style="background-color:white" data-depth=".20" ng-hide="scene.next">
+      <scene-navigator location="sceneText"></scene-navigator>
+    <li>
   </ul>
 </div>
