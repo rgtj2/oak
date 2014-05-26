@@ -8,6 +8,11 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 }
 
+body {
+  background-image:url('/images/painting.jpg');
+  background-repeat: repeat;
+}
+
 
 .scene-navigator {
     border: 2px solid black;
