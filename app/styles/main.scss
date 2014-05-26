@@ -4,9 +4,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
+
 
 }
 
@@ -17,31 +15,59 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 #scene-x {
   img { 
-    width: 80%
+    width: 100%
   }
   li {
     list-style-type: none
   }
   .scene-navigator {
     text-align: center;
-    width: 250px;
-    padding: 5px;
+    width: 40%;
+    padding: 12px 18px;
     float: right;
     position: relative;
-    left: -150px;
-    bottom: -5px;
+    bottom: -15px;
+    left: -40px;
     background-color: white;
     h3 {
-      font-size: 16px;
+      font-size: 20px;
       margin: 0px;
+    };
+    @media (max-width: 700px) and (min-width: 501px) {
+      left: -18px;
+      padding: 6px 9px;
+      width: 42%;
+      h3 { 
+        font-size: 14px;
+      }
     }
-  @media (max-width: 700px) {
-    max-width: 200px;
-    padding: 2px;
-    left: -80px;
-    h3 { 
-      font-size: 12px;
-    }
+    @media (max-width: 500px) {
+      left: -8px;
+      padding: 6px 9px;
+      bottom: -8px;
+      width: 48%;
+      h3 { 
+        font-size: 10px;
+      }
+    }    
   }
-  }
+}
+
+
+.sample-show-hide.ng-hide-add, .sample-show-hide.ng-hide-remove {
+  -webkit-transition:all linear 5s;
+  -moz-transition:all linear 5s;
+  -o-transition:all linear 5s;
+  transition:all linear 5s;
+  display:block!important;
+}
+
+.sample-show-hide.ng-hide-add.ng-hide-add-active,
+.sample-show-hide.ng-hide-remove {
+  opacity:0;
+}
+
+.sample-show-hide.ng-hide-add,
+.sample-show-hide.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
 }

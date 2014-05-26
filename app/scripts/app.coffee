@@ -4,7 +4,8 @@ angular.module('oakApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'ngAnimate'
 ])
   .config ($routeProvider) ->
     $routeProvider

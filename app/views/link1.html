@@ -22,3 +22,10 @@
     <scene-navigator location="other"></scene-navigator>
   </span>
 </div>
+<hr>
+<br> 
+<input ng-model="search" placeholder="Search..">
+<div ng-repeat="(key, value) in grouped">
+  <h1> Scene {{key}} </h1>
+  <span class="sample-show-hide" ng-repeat="val in value | filter:search">
+    <h4> {{val.text}} </h4>
